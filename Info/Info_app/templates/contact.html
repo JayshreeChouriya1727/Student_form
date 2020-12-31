@@ -25,22 +25,24 @@
         h1 {
             font-size: 40px;
             color: white;
-            margin-top:10%;
+            margin-top: 10%;
         }
+
         p {
             font-size: 15px;
             color: white;
         }
+
         .image {
             margin-left: 40%;
             margin-top: 10%;
         }
+
         /*__________________________column two style__________________________*/
         h3 {
             font-size: 20px;
             color: rgb(218, 200, 200);
             text-align: center;
-
         }
 
         .FM {
@@ -70,7 +72,6 @@
         small {
             font-size: 15px;
             color: white;
-
         }
 
         input[type="radio"] {
@@ -94,9 +95,7 @@
 </head>
 
 <body>
-
     <div class="container">
-
         <div class="row">
             <!--_______________________________start description____________________________-->
             <div class="col-md-6">
@@ -106,49 +105,50 @@
                 <p class="text-left">Avishkar Tech Solution is committed to helping IT students to
                     reach their goals, to personalizing their experiences, to get their dream job providing
                     an innovative environment, and for making a difference.</p>
-               
+
             </div>
             <!--_________________________________end description________________________________________-->
             <!--_________________________________start form_____________________________________________-->
             <div class="col-md-6 FM">
-                
-                    <h3 class="font-weight-bold text-uppercase">Registration Form</h3>
-                    {% if error %}
-                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                        <strong></strong>{{ error }}
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                          <span aria-hidden="true">&times;</span>
-                        </button>
-                      </div>
-                    {% endif %}
-                    {% if message %}
-                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                        <strong></strong>{{ message }}
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                          <span aria-hidden="true">&times;</span>
-                        </button>
-                      </div>
-                    {% endif %}
-              
+
+                <h3 class="font-weight-bold text-uppercase">Registration Form</h3>
+                {% if error %}
+                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                    <strong></strong>{{ error }}
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                {% endif %}
+                {% if message %}
+                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                    <strong></strong>{{ message }}
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                {% endif %}
+
                 <hr>
                 <form action="{% url 'contact'%}" method="post">
                     {% csrf_token %}
                     <div class="row">
-                        <lable class="label col-md-2 control-label font-weight-bold">Name</lable>
+                        <lable class="label col-md-2 control-label font-weight-bold text-center">Name</lable>
                         <div class="col-md-10">
-                            <input type="text" class="form-control" name="name" placeholder="Enter name", required>
+                            <input type="text" class="form-control" name="name" placeholder="Enter name" , required>
                         </div>
                     </div>
                     <div class="row">
-                        <lable class="label col-md-2 control-label font-weight-bold">E-mail</lable>
+                        <lable class="label col-md-2 control-label font-weight-bold text-center">E-mail</lable>
                         <div class="col-md-10">
-                            <input type="email" class="form-control" name="email" placeholder="Enter E-mail", required>
+                            <input type="email" class="form-control" name="email" placeholder="Enter E-mail" , required>
                         </div>
                     </div>
                     <div class="row">
-                        <lable class="label col-md-2 control-label font-weight-bold">Phone.no</lable>
+                        <lable class="label col-md-2 control-label font-weight-bold text-center">Phone.no</lable>
                         <div class="col-md-10">
-                            <input type="text" class="form-control" name="phone" pattern="[0-9]{10}" placeholder="+91",required>
+                            <input type="text" class="form-control" name="phone" pattern="[0-9]{10}" placeholder="+91"
+                                ,required>
                         </div>
                     </div>
                     <div class="row">
@@ -195,7 +195,6 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="row">
                         <lable class="label col-md-2 control-label font-weight-bold">Message</lable>
                         <div class="col-md-10">

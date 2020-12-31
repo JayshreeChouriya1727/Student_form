@@ -14,7 +14,6 @@
         body {
             margin: 0px;
             padding: 0px;
-
             background-image: url('{% static "Image/laptop-5421966_1920.jpg" %}');
             background-size: cover;
             background-attachment: fixed;
@@ -27,25 +26,20 @@
             font-size: 18px;
             color: white;
             text-align: center;
-
         }
-
         .FM {
             margin-top: 100px;
-
             box-shadow: -1px 1px 60px 10px rgb(51, 42, 42);
             background: rgba(0, 0, 0, 0.4);
             padding-top: 10px;
             padding-bottom: 10px;
         }
-
         .label {
             font-weight: normal;
             margin-top: 20px;
             color: white;
             font-size: 15px;
         }
-
         .form-control {
             background: transparent;
             border-radius: 0px;
@@ -56,10 +50,6 @@
             color: white;
             height: 40px;
         }
-
-
-
-
         .btn-info {
             margin-top: 40px;
             text-align: center;
@@ -68,7 +58,6 @@
             border-radius: 0px;
             margin-bottom: 20px;
         }
-
         .fas {
             text-align: center;
             justify-content: center;
@@ -77,21 +66,14 @@
             margin-top: 10px;
         }
     </style>
-
 </head>
-
 <body>
-
     <div class="container">
-
         <div class="row">
-
             <!--_______________________________start description____________________________-->
             <div class="col-md-4">
             </div>
-
             <div class="col-md-4 FM">
-
                 <h3 class=" text-center">SignUp here</h3>
                 <i class=" fas fa-3x fa-user-circle"></i>
                 {% if error %}
@@ -103,7 +85,8 @@
                     <div class="row mb-3">
                         <lable class="label col-md-4 control-label font-weight-bold">Username</lable>
                         <div class="col-md-8">
-                            <input type="text" class="form-control" name="username" placeholder="enter username" , required>
+                            <input type="text" class="form-control" name="username" placeholder="enter username" ,
+                                required>
                         </div>
                     </div>
                     <div class="row mb-3">
@@ -115,14 +98,15 @@
                     <div class="row mb-3">
                         <lable class="label col-md-4 control-label font-weight-bold">Password</lable>
                         <div class="col-md-8">
-                            <input type="password" class="form-control" name="password" placeholder="enter password" , required>
+                            <input type="password" class="form-control" name="password" placeholder="enter password" ,
+                                required>
                         </div>
                     </div>
                     <div class="row mb-3">
                         <lable class="label col-md-4 control-label font-weight-bold">Confirm Password</lable>
                         <div class="col-md-8">
-                            <input type="password" class="form-control" name="confirmpassword" placeholder="enter confirm password" ,
-                                required>
+                            <input type="password" class="form-control" name="confirmpassword"
+                                placeholder="enter confirm password" , required>
                         </div>
                     </div>
                     <a href="#">
@@ -132,8 +116,6 @@
                         Already Member?
                         <a href="{% url 'login' %}" class="font-weight-bold">Login now</a>
                     </div>
-
-
                 </form>
             </div>
             <!--____________________________end form___________________________________-->

@@ -15,6 +15,8 @@ def login(request):
             return render(request,'login.html',{'error':"Invalid login Credential"})
     return render(request,'login.html')
 
+#__________________________________login function end____________________________________#    
+
 def signup(request):
     if request.method == "POST":
         # to creat a user
@@ -33,7 +35,9 @@ def signup(request):
         else:
             return render(request,'signup.html',{'error':"Password don't match"})    
     else:
-        return render(request,'signup.html')    
+        return render(request,'signup.html')  
+#____________________________________signup function end_______________________________#          
+
     
 def contact(request):
     if request.method == "POST":
@@ -44,12 +48,16 @@ def contact(request):
         courses = request.POST['courses']
         category = request.POST['category']
         desc = request.POST['desc']
+        # this line check in model this email or phone exist or not ,if exist it will return error message
         try:
             ins= Student.objects.get(phone=request.POST['phone'],email= request.POST['email'])
             return render(request,'contact.html',{'error': "number or Email has Already Been exist!!!!"})
+        # if this already not exist , creat student   
         except Student.DoesNotExist:
             ins = Student(name=name, email=email, phone=phone, gender=gender, courses=courses, category=category, desc=desc)
             ins.save()
             return render(request,'contact.html',{'message':"Your Information Successfully Submitted..."})
         
     return render(request,'contact.html')
+
+#___________________________________contact function end______________________________#
